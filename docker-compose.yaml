@@ -3,7 +3,7 @@ services:
   postgresql:
     hostname: postgres-hostname
     image: postgres
-    container_name: postgres-football
+    container_name: postgres
     volumes:
       - db-data:/var/lib/postgres
     environment:
@@ -11,7 +11,7 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: football
     ports:
-      - "5432:5432"
+      - "5433:5432"
     networks:
       - ms_network
 
